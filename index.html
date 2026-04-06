@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Future Discovery</title>
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+html { scroll-behavior:smooth; }
+
+body {
+margin:0;
+font-family:Arial, sans-serif;
+background:#0b0f14;
+color:white;
+}
+
+/* NAV */
+nav {
+position:fixed;
+top:0;
+width:100%;
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:14px 18px;
+background:rgba(10,125,44,0.9);
+z-index:999;
+}
+
+nav a {
+color:white;
+margin:0 8px;
+text-decoration:none;
+font-size:14px;
+}
+
+/* HERO */
+.hero {
+background:url('IMG_2905.jpeg') center/cover no-repeat;
+height:100vh;
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+text-align:center;
+position:relative;
+padding:20px;
+}
+
+.hero::before {
+content:"";
+position:absolute;
+top:0;left:0;
+width:100%;height:100%;
+background:rgba(0,0,0,0.65);
+}
+
+.hero h1 {
+font-size:50px;
+z-index:1;
+margin:0;
+}
+
+.hero p {
+font-size:17px;
+z-index:1;
+opacity:0.9;
+max-width:700px;
+}
+
+/* BUTTON */
+.btn {
+background:linear-gradient(135deg,#0a7d2c,#12b347);
+color:white;
+padding:12px 22px;
+border-radius:30px;
+text-decoration:none;
+margin:8px;
+font-size:15px;
+z-index:1;
+}
+
+/* SECTIONS */
+.section {
+padding:80px 18px;
+text-align:center;
+}
+
+.section h2 {
+font-size:32px;
+margin-bottom:20px;
+}
+
+/* GRID */
+.grid {
+display:flex;
+flex-wrap:wrap;
+justify-content:center;
+gap:15px;
+}
+
+/* CARD */
+.card {
+background:rgba(255,255,255,0.08);
+border:1px solid rgba(255,255,255,0.15);
+padding:18px;
+border-radius:14px;
+width:230px;
+font-size:15px;
+}
+
+/* DASHBOARD */
+.dashboard {
+display:flex;
+flex-wrap:wrap;
+justify-content:center;
+gap:15px;
+}
+
+.stat {
+background:rgba(18,179,71,0.15);
+border:1px solid #12b347;
+padding:15px;
+border-radius:12px;
+width:200px;
+font-weight:bold;
+}
+
+/* ORDER BOX */
+.order-box {
+background:rgba(255,255,255,0.08);
+border:1px solid rgba(255,255,255,0.2);
+padding:20px;
+border-radius:15px;
+max-width:420px;
+margin:auto;
+}
+
+input, select {
+width:90%;
+padding:10px;
+margin:8px 0;
+border-radius:8px;
+border:none;
+font-size:14px;
+}
+
+button {
+width:95%;
+padding:12px;
+border:none;
+border-radius:8px;
+background:#12b347;
+color:white;
+font-size:15px;
+cursor:pointer;
+}
+
+button:hover {
+background:#0a7d2c;
+}
+
+/* MAP */
+.map {
+width:100%;
+height:350px;
+border:none;
+border-radius:12px;
+margin-top:15px;
+}
+
+/* FLOAT */
+.float {
+position:fixed;
+bottom:18px;
+right:18px;
+display:flex;
+flex-direction:column;
+gap:10px;
+}
+
+.float a {
+background:#25D366;
+padding:14px;
+border-radius:50%;
+text-decoration:none;
+color:white;
+font-size:18px;
+}
+
+/* IMAGE FIX */
+img {
+object-fit:cover;
+}
+</style>
+</head>
+
+<body>
+
+<!-- NAV -->
+<nav>
+<div><b>Future Discovery</b></div>
+<div>
+<a href="#dashboard">Dashboard</a>
+<a href="#services">Services</a>
+<a href="#order">Order</a>
+<a href="#contact">Contact</a>
+</div>
+</nav>
+
+<!-- HERO -->
+<div class="hero">
+<h1>Future Discovery</h1>
+<p>Fuel • Forex • Supermarket • Restaurant — Smart Business System</p>
+
+<a class="btn" href="tel:0777495808">Call</a>
+<a class="btn" href="https://wa.me/211777495808">WhatsApp</a>
+</div>
+
+<!-- DASHBOARD -->
+<div class="section" id="dashboard">
+<h2>Live Business Dashboard</h2>
+
+<div class="dashboard">
+<div class="stat">⛽ Fuel Available ✔</div>
+<div class="stat">💱 Forex Active ✔</div>
+<div class="stat">🏪 Supermarket Open ✔</div>
+<div class="stat">🛒 Orders Today: 12</div>
+</div>
+</div>
+
+<!-- SERVICES -->
+<div class="section" id="services">
+<h2>Services</h2>
+
+<div class="grid">
+<div class="card">⛽ Fuel Supply</div>
+<div class="card">💱 Forex Exchange</div>
+<div class="card">🏪 Supermarket</div>
+<div class="card">🍽 Restaurant</div>
+<div class="card">🚗 Customer Care</div>
+</div>
+</div>
+
+<!-- ORDER SYSTEM -->
+<div class="section" id="order">
+<h2>Place Order</h2>
+
+<div class="order-box">
+<input id="name" placeholder="Your Name">
+<input id="phone" placeholder="Phone Number">
+
+<select id="service">
+<option>Fuel</option>
+<option>Supermarket</option>
+<option>Restaurant</option>
+<option>Forex</option>
+</select>
+
+<input id="details" placeholder="Order details">
+
+<button onclick="sendOrder()">Send via WhatsApp</button>
+</div>
+</div>
+
+<!-- CONTACT -->
+<div class="section" id="contact">
+<h2>Contact & Location</h2>
+
+<p>📍 Nyakorun</p>
+<p>📞 0777 495 808</p>
+
+<iframe class="map"
+src="https://www.google.com/maps?q=Nyakorun&output=embed">
+</iframe>
+</div>
+
+<!-- FLOAT -->
+<div class="float">
+<a href="https://wa.me/211777495808">💬</a>
+<a href="tel:0777495808">📞</a>
+</div>
+
+<script>
+function sendOrder(){
+let name = document.getElementById("name").value;
+let phone = document.getElementById("phone").value;
+let service = document.getElementById("service").value;
+let details = document.getElementById("details").value;
+
+let message =
+`Hello Future Discovery,%0A
+Name: ${name}%0A
+Phone: ${phone}%0A
+Service: ${service}%0A
+Details: ${details}`;
+
+window.open("https://wa.me/211777495808?text=" + message);
+}
+</script>
+
+</body>
+</html>
